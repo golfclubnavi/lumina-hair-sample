@@ -1,0 +1,22 @@
+
+:root{--ink:#30342f;--green:#7f966f;--pale:#faf8f3;--line:#e8e3db}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--ink);background:#fff;font-family:"Yu Mincho","Hiragino Mincho ProN",Georgia,serif}
+a{color:inherit;text-decoration:none}img{display:block;width:100%;height:100%;object-fit:cover}
+header{height:68px;display:flex;align-items:center;border-bottom:1px solid var(--line);background:#fff;position:sticky;top:0;z-index:10}
+.nav{width:min(1180px,92%);margin:auto;display:flex;align-items:center}.logo{font-size:18px;letter-spacing:.09em}.logo small{display:block;font-size:7px;letter-spacing:.24em}
+.links{margin-left:auto;display:flex;align-items:center;gap:26px;font-family:Arial,sans-serif;font-size:10px;letter-spacing:.12em}
+.reserve{background:var(--green);color:#fff;padding:11px 16px}.hamb{display:none;margin-left:auto;border:0;background:none;font-size:24px}
+.hero{min-height:570px;display:grid;grid-template-columns:44% 56%;background:#fbfaf7}.heroText{display:flex;align-items:center;padding:7vw}.heroText h1{font-weight:400;font-size:clamp(38px,4.5vw,62px);line-height:1.55;margin:12px 0 20px}
+.kicker{font-family:Arial,sans-serif;color:var(--green);font-size:10px;letter-spacing:.24em}.heroText p{font-size:13px;line-height:2;color:#666;max-width:430px}.btn{display:inline-block;margin-top:20px;padding:11px 22px;background:var(--green);color:#fff;font-size:12px}
+.heroImg{background:url("images/hero.jpg") center/cover}
+section{padding:82px 0}.wrap{width:min(1080px,88%);margin:auto}.concept{display:grid;grid-template-columns:1fr 1fr;align-items:stretch}
+.conceptText{padding:72px max(6vw,45px);background:#fff}.conceptText h2{font-size:31px;font-weight:400;line-height:1.65;margin:8px 0 20px}.conceptText p{font-size:12px;line-height:2.2;color:#666}
+.conceptImg{min-height:410px;background:url("images/concept.jpg") center/cover}.heading{text-align:center;margin-bottom:38px}.heading span{font-family:Arial,sans-serif;color:var(--green);font-size:10px;letter-spacing:.22em}.heading h2{font-size:28px;font-weight:400;letter-spacing:.06em;margin:7px}
+.menuGrid{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.menuItem{text-align:center;padding:34px 18px;border-right:1px solid var(--line)}.menuItem:last-child{border-right:0}
+.menuItem b{font-size:25px;font-weight:400;color:var(--green)}.menuItem h3{font-size:15px;font-weight:400;margin:10px}.menuItem p{font-size:10px;color:#777;line-height:1.8}.price{font-family:Arial,sans-serif;font-size:13px;margin-top:15px}
+.style{background:var(--pale)}.styles{display:grid;grid-template-columns:repeat(4,1fr);gap:13px}.stylePic{aspect-ratio:4/5;overflow:hidden;background:#eee}
+.accessGrid{display:grid;grid-template-columns:1fr 1fr;gap:34px}.access h3,.contact h3{font-size:21px;font-weight:400;letter-spacing:.06em}.info{font-family:Arial,sans-serif;font-size:11px;color:#666;line-height:2}
+.map{height:245px;margin-top:18px;background:linear-gradient(35deg,#e4e8df 1px,transparent 1px),linear-gradient(145deg,#e4e8df 1px,transparent 1px),#f6f5f0;background-size:45px 45px;display:grid;place-items:center}.pin{width:42px;height:42px;border-radius:50% 50% 50% 0;background:var(--green);transform:rotate(-45deg);position:relative}.pin:after{content:"";position:absolute;width:14px;height:14px;background:white;border-radius:50%;left:14px;top:14px}
+.contactBox{border:1px solid var(--line);padding:32px}.contactBox p{font-size:12px;line-height:2;color:#666}.contactBox a{display:block;text-align:center;padding:12px;margin-top:10px}.mail{border:1px solid var(--green);color:#64755d}
+footer{background:#eee9e0;text-align:center;padding:28px;font-family:Arial,sans-serif;font-size:9px;color:#777}.demo{position:fixed;right:12px;bottom:12px;background:#2f3930;color:#fff;border-radius:20px;padding:8px 11px;font-family:Arial,sans-serif;font-size:9px}
+@media(max-width:700px){header{height:58px}.links{display:none}.hamb{display:block}.hero{grid-template-columns:1fr;min-height:0}.heroImg{order:-1;height:330px}.heroText{padding:45px 8% 55px}.heroText h1{font-size:38px}.concept{grid-template-columns:1fr}.conceptImg{height:300px;min-height:0}.conceptText{padding:52px 8%}.menuGrid{grid-template-columns:1fr 1fr}.menuItem:nth-child(2){border-right:0}.menuItem:nth-child(-n+2){border-bottom:1px solid var(--line)}.styles{grid-template-columns:1fr 1fr}.accessGrid{grid-template-columns:1fr}section{padding:65px 0}}
