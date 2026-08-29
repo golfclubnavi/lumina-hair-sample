@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LUMINA HAIR | Sample Website by NEXIA Works</title>
+<meta name="description" content="NEXIA Worksによる美容室向けホームページ制作サンプル。">
+<style>
+:root{
+  --bg:#fbfaf7;
+  --paper:#ffffff;
+  --ink:#2f352f;
+  --muted:#70766f;
+  --sage:#9db39b;
+  --sage-dark:#6f8c70;
+  --line:#e8e2d8;
+  --beige:#efe9df;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif;color:var(--ink);background:var(--bg);line-height:1.8}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.container{width:min(1120px,92%);margin:auto}
+header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);border-bottom:1px solid rgba(232,226,216,.7)}
+.nav{height:74px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.brand{font-family:Georgia,serif;font-size:22px;letter-spacing:.08em}
+.brand small{display:block;font-family:inherit;font-size:9px;letter-spacing:.24em;margin-top:-5px}
+nav ul{display:flex;gap:26px;list-style:none;margin:0;padding:0;font-size:13px;letter-spacing:.08em}
+.reserve{background:var(--sage-dark);color:#fff;padding:12px 18px;border-radius:3px}
+.menu-btn{display:none;border:0;background:none;font-size:28px}
+.hero{min-height:640px;display:grid;grid-template-columns:1.05fr .95fr;background:linear-gradient(90deg,#fff 0 49%,#f4efe7 49%)}
+.hero-copy{display:flex;align-items:center}
+.hero-copy .inner{padding:70px 8vw 70px max(4vw,30px)}
+.eyebrow{font-size:12px;letter-spacing:.24em;color:var(--sage-dark);font-weight:700}
+h1{font-family:Georgia,"Yu Mincho",serif;font-size:clamp(42px,6vw,76px);font-weight:500;line-height:1.35;margin:18px 0 20px}
+.hero p{max-width:540px;color:var(--muted)}
+.cta{display:inline-block;margin-top:24px;background:var(--sage-dark);color:#fff;padding:14px 24px;border-radius:3px}
+.hero-photo{
+  min-height:640px;
+  background:
+    linear-gradient(rgba(255,255,255,.05),rgba(0,0,0,.06)),
+    url('https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1400&q=85') center/cover;
+}
+section{padding:96px 0}
+.section-title{font-family:Georgia,serif;letter-spacing:.18em;color:var(--sage-dark);font-size:14px;text-align:center;margin-bottom:10px}
+.section-heading{text-align:center;font-family:Georgia,"Yu Mincho",serif;font-size:36px;font-weight:500;margin:0 0 42px}
+.concept-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.photo-card{min-height:420px;border-radius:2px;background:url('https://images.unsplash.com/photo-1527799820374-dcf8d9d4a388?auto=format&fit=crop&w=1100&q=85') center/cover}
+.concept-copy h2{font-family:Georgia,"Yu Mincho",serif;font-size:34px;font-weight:500;line-height:1.5}
+.concept-copy p{color:var(--muted)}
+.menu-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.menu-card{background:#fff;border:1px solid var(--line);padding:30px 24px;text-align:center}
+.menu-card .icon{font-size:27px}
+.menu-card h3{font-family:Georgia,serif;font-weight:500;margin:12px 0 4px}
+.price{font-size:20px;margin-top:18px}
+.menu-card p{font-size:13px;color:var(--muted)}
+.style-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.style-grid img{aspect-ratio:3/4;object-fit:cover}
+.access-wrap{display:grid;grid-template-columns:1fr 1fr;gap:30px}
+.access-card,.contact-card{background:#fff;border:1px solid var(--line);padding:36px}
+.access-card h3,.contact-card h3{font-family:Georgia,serif;font-weight:500;font-size:26px;margin-top:0}
+.meta{display:grid;gap:8px;color:var(--muted);font-size:14px}
+.map{min-height:260px;background:
+  linear-gradient(45deg,#dfe7dd 25%,transparent 25%),
+  linear-gradient(-45deg,#dfe7dd 25%,transparent 25%),
+  linear-gradient(45deg,transparent 75%,#dfe7dd 75%),
+  linear-gradient(-45deg,transparent 75%,#dfe7dd 75%);
+  background-size:28px 28px;background-position:0 0,0 14px,14px -14px,-14px 0;
+  position:relative;display:grid;place-items:center;margin-top:22px;
+}
+.map::after{content:"◎";font-size:54px;color:var(--sage-dark);background:#fff;border-radius:50%;width:72px;height:72px;display:grid;place-items:center;box-shadow:0 10px 30px #0001}
+.btn-outline{display:inline-block;margin-top:18px;border:1px solid var(--sage-dark);color:var(--sage-dark);padding:11px 18px}
+.contact-actions{display:grid;gap:12px;margin-top:22px}
+.contact-actions button,.contact-actions a{border:0;padding:14px 18px;font-size:15px;cursor:pointer;text-align:center}
+.primary{background:var(--sage-dark);color:#fff}
+.secondary{background:#fff;border:1px solid var(--sage-dark)!important;color:var(--sage-dark)}
+.notice{font-size:12px;color:var(--muted);margin-top:14px}
+footer{background:#f3eee6;border-top:1px solid var(--line);padding:34px 0;text-align:center;font-size:12px;color:var(--muted)}
+.demo-badge{position:fixed;right:14px;bottom:14px;background:#223126;color:#fff;padding:9px 12px;border-radius:999px;font-size:11px;z-index:100;box-shadow:0 8px 25px #0002}
+@media(max-width:850px){
+  nav ul,.reserve{display:none}
+  .menu-btn{display:block}
+  nav.open ul{display:flex;position:absolute;top:74px;left:0;right:0;background:#fff;flex-direction:column;padding:24px;border-bottom:1px solid var(--line)}
+  .hero{grid-template-columns:1fr;background:#fff}
+  .hero-photo{order:-1;min-height:430px}
+  .hero-copy .inner{padding:52px 7% 64px}
+  .concept-grid,.access-wrap{grid-template-columns:1fr}
+  .menu-grid{grid-template-columns:1fr 1fr}
+  .style-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:520px){
+  .nav{height:64px}
+  .hero-photo{min-height:330px}
+  h1{font-size:42px}
+  section{padding:72px 0}
+  .menu-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="container nav">
+    <a class="brand" href="#top">LUMINA HAIR<small>HAIR SALON</small></a>
+    <nav id="nav">
+      <ul>
+        <li><a href="#top">TOP</a></li>
+        <li><a href="#concept">CONCEPT</a></li>
+        <li><a href="#menu">MENU</a></li>
+        <li><a href="#style">STYLE</a></li>
+        <li><a href="#access">ACCESS</a></li>
+        <li><a href="#contact">CONTACT</a></li>
+      </ul>
+    </nav>
+    <a class="reserve" href="#contact">ご予約はこちら</a>
+    <button class="menu-btn" id="menuBtn" aria-label="メニュー">☰</button>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero" style="padding:0">
+    <div class="hero-copy">
+      <div class="inner">
+        <div class="eyebrow">PRIVATE HAIR SALON</div>
+        <h1>その人らしさを、<br>もっと輝かせる。</h1>
+        <p>一人ひとりに寄り添い、理想のスタイルを叶えるプライベートサロン。落ち着いた空間で、心まで整うひとときを。</p>
+        <a class="cta" href="#contact">ご予約はこちら →</a>
+      </div>
+    </div>
+    <div class="hero-photo" role="img" aria-label="明るく清潔感のある美容室"></div>
+  </section>
+
+  <section id="concept">
+    <div class="container concept-grid">
+      <div class="concept-copy">
+        <div class="eyebrow">CONCEPT</div>
+        <h2>あなたの魅力を引き出す<br>特別な時間を。</h2>
+        <p>LUMINA HAIRは、お客様一人ひとりの「なりたい」を大切にするプライベートサロンです。丁寧なカウンセリングと確かな技術で、毎日が少し特別になるスタイルをご提案します。</p>
+      </div>
+      <div class="photo-card"></div>
+    </div>
+  </section>
+
+  <section id="menu" style="background:#f7f3ed">
+    <div class="container">
+      <div class="section-title">MENU</div>
+      <h2 class="section-heading">Service & Price</h2>
+      <div class="menu-grid">
+        <div class="menu-card"><div class="icon">✂</div><h3>Cut</h3><p>骨格・髪質を見極めた再現性の高いカット。</p><div class="price">¥4,950〜</div></div>
+        <div class="menu-card"><div class="icon">◌</div><h3>Color</h3><p>透明感とツヤを大切にした上品なカラー。</p><div class="price">¥7,700〜</div></div>
+        <div class="menu-card"><div class="icon">✦</div><h3>Treatment</h3><p>内側から補修し、うるおいのある髪へ。</p><div class="price">¥3,300〜</div></div>
+        <div class="menu-card"><div class="icon">♨</div><h3>Head Spa</h3><p>頭皮をほぐして心身ともにリフレッシュ。</p><div class="price">¥4,400〜</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="style">
+    <div class="container">
+      <div class="section-title">STYLE</div>
+      <h2 class="section-heading">Hair Style</h2>
+      <div class="style-grid">
+        <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=700&q=80" alt="ヘアスタイルサンプル1">
+        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=700&q=80" alt="ヘアスタイルサンプル2">
+        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=700&q=80" alt="ヘアスタイルサンプル3">
+        <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=700&q=80" alt="ヘアスタイルサンプル4">
+      </div>
+    </div>
+  </section>
+
+  <section id="access" style="background:#f7f3ed">
+    <div class="container">
+      <div class="section-title">ACCESS & CONTACT</div>
+      <h2 class="section-heading">Salon Information</h2>
+      <div class="access-wrap">
+        <div class="access-card">
+          <h3>LUMINA HAIR</h3>
+          <div class="meta">
+            <div>〒150-0001 東京都渋谷区サンプル1-2-3</div>
+            <div>JR「原宿駅」徒歩6分 / 東京メトロ「明治神宮前駅」徒歩3分</div>
+            <div>平日 10:00–20:00 / 土日祝 9:00–19:00</div>
+            <div>定休日：火曜日</div>
+          </div>
+          <div class="map"></div>
+          <a class="btn-outline" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=原宿駅">Google Mapで見る →</a>
+        </div>
+        <div class="contact-card" id="contact">
+          <h3>ご予約・お問い合わせ</h3>
+          <p>ご予約やご相談は、下記よりお気軽にご連絡ください。</p>
+          <div class="contact-actions">
+            <button class="primary" id="reserveBtn">ご予約はこちら</button>
+            <a class="secondary" href="mailto:sample@example.com?subject=LUMINA%20HAIR%20お問い合わせ">メールでお問い合わせ</a>
+          </div>
+          <p class="notice">※このサイトはNEXIA Worksの制作サンプルです。LUMINA HAIRは架空の店舗です。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    © 2026 LUMINA HAIR — Sample Website by NEXIA Works
+  </div>
+</footer>
+
+<div class="demo-badge">NEXIA Works 制作サンプル</div>
+
+<script>
+const menuBtn = document.getElementById('menuBtn');
+const nav = document.getElementById('nav');
+menuBtn.addEventListener('click',()=>nav.classList.toggle('open'));
+document.querySelectorAll('nav a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('open')));
+document.getElementById('reserveBtn').addEventListener('click',()=>{
+  alert('こちらは制作サンプルです。実案件では予約フォーム・LINE・予約サイト等へ接続できます。');
+});
+</script>
+</body>
+</html>
